@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <div class="row">
+    <div *ngFor="let character of characters | async, let a of paginacao | paginate: { itemsPerPage: 5, currentPage: paginaAtual }, let i = index" class="card" style="width: 18rem;">
+      <div class="col-sm">
+        <img class="card-img-top" src="{{character.thumbnail.path}}/portrait_xlarge.jpg">
+        <p *ngIf="randoms == i" class="itemRaro">ITEM RARO!!</p>
+        <p *ngIf="randoms2 == i" class="itemRaro">ITEM RARO!!</p>
+        <p *ngIf="randoms3 == i" class="itemRaro">ITEM RARO!!</p>
+        <p *ngIf="randoms4 == i" class="itemRaro">ITEM RARO!!</p>
+        <p *ngIf="randoms5 == i" class="itemRaro">ITEM RARO!!</p>
+        <p *ngIf="randoms2 != i && randoms3 != i && randoms4 != i && randoms5 != i && randoms != i" class="itemComum">ITEM COMUM</p>
+        <div class="card-body">
+          <h5 class="card-title">{{character.name}}</h5> 
+          <p class="card-title">{{character.description}}</p>
+          <div class="btn-group">
+          </div>
+          <mat-card-footer>
+            <button><a class="dropdown-item" (click)="showQuadrinhos(character.id)">Quadrinho</a></button>
+            <button><a class="dropdown-item" (click)="showSeries(character.id)">Série</a></button>
+            <button><a class="dropdown-item" (click)="showEventos(character.id)">Evento</a></button>
+            <button><a class="dropdown-item" (click)="showHistorias(character.id)">História</a></button>
+            
+          </mat-card-footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <pagination-controls class="btn" (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+  </div>
+</div>
+

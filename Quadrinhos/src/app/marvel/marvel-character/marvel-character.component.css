@@ -1,0 +1,49 @@
+.jumbotron{
+    background-color: brown;
+}
+
+button{
+    background-color:brown;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+a{
+    color: white;
+}
+
+.card{
+    margin: 1rem;;
+}
+
+.row{
+    margin-left: 15px;
+}
+
+.card-img-top{
+    background-size: cover;
+}
+
+.itemRaro{
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 20px;
+    width: 90%;
+    background-color: rgba(232, 0, 0, 0.796);
+    color: white;
+}
+
+.itemComum{
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 20px;
+    width: 90%;
+    background-color: rgba(16, 26, 51, 0.5);
+    color: white;
+}
+
+.btn{
+    background-color: white;
+}
